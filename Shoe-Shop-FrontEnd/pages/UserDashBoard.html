@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User DashBoard</title>
+
+    <meta content="hello shoe pvt" name="keywords">
+    <meta content="This is hello shoe pvt web project" name="description">
+    <meta content="" name="author">
+    <meta content="" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="green" name="theme-color">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="../assets/vendor/sweetalert2-11.6.16/sweetalert2.css">
+    <link rel="stylesheet" href="../assets/css/dashboardStyle.css">
+
+
+
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="UserDashBoard.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">Hello <span>Shoe.</span></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+    <form class="d-none d-md-flex ms-4 " >
+        <input class="form-control border-0" type="search" placeholder="Search">
+    </form>
+
+    <h1 id="greeting"></h1>
+
+</header>
+
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="UserDashBoard.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="userPages/Sale.html">
+                <i class="bi bi-grid"></i>
+                <span>Sales</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="userPages/SaleDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>SaleDetails</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="userPages/EmployeeDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>EmployeeView</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="userPages/InventoryDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>InventoryView</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="userPages/SuppliersDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>SuppliersView</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+
+
+    </ul>
+
+</aside>
+
+
+<!-- ======= Main ======= -->
+<main id="main" class="main">
+
+    <div class="pageTitle" id="pageTwo">
+        <h1>User Dashboard</h1>
+
+    </div>
+
+    <div class="col-lg-12">
+        <div class="row">
+    <div class="col-xxl-4 col-md-6" >
+        <div class="card info-card " style="background-color: #C4E4FF">
+            <div class="card-body">
+                <h5 class="card-title">Total  Sale</span></h5>
+                <div class="d-flex align-items-center">
+                    <img class="image" src="../assets/img/analytics.gif">
+                    <div>
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h3 id="totalCustomers">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xxl-4 col-md-6">
+        <div class="card info-card car-card" style="background-color: #C4E4FF">
+            <div class="card-body">
+                <h5 class="card-title">Total  Loyality Customer</span></h5>
+                <div class="d-flex align-items-center">
+                    <img class="image" src="../assets/img/customer.gif">
+                    <div class="ps-3">
+                        <h3 id="totalSales">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xxl-4 col-md-6">
+        <div class="card info-card car-card" style="background-color: #C4E4FF">
+            <div class="card-body">
+                <h5 class="card-title">Total Employee</span></h5>
+                <div class="d-flex align-items-center">
+                    <img class="image" src="../assets/img/businessman.gif">
+                    <div class="ps-3">
+                        <h3 id="totalEmployee">0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+
+
+    </div>
+
+    <section class="section dashboard">
+           <img class="user" src="../assets/img/shoe.png">
+    </section>
+</main>
+
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../assets/vendor/sweetalert2-11.6.16/sweetalert2.all.min.js"></script>
+
+
+<!-- Template Dashboard Main JS File -->
+<script src="../assets/js/dashboardMain.js"></script>
+<script src="../controller/loginController.js"></script>
+<script src="../controller/UserDashBoardController.js"></script>
+
+
+</body>
+</html>

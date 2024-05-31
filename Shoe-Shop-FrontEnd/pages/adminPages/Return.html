@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReturnForm</title>
+
+    <meta content="hello shoe pvt" name="keywords">
+    <meta content="This is hello shoe pvt web project" name="description">
+    <meta content="" name="author">
+    <meta content="" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="green" name="theme-color">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.css">
+    <link rel="stylesheet" href="../../assets/css/dashboardStyle.css">
+
+</head>
+
+<body>
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="AdminDashBoard.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">Hello <span>Shoe</span></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+    <form class="d-none d-md-flex ms-4 " >
+        <input class="form-control border-0" type="search" placeholder="Search">
+    </form>
+
+</header>
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../AdminDashBoard.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Customer.html">
+                <i class="bi bi-table"></i>
+                <span>Customer</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Employee.html">
+                <i class="bi bi-table"></i>
+                <span>Employee</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Inventory.html">
+                <i class="bi bi-kanban"></i>
+                <span>Inventory</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Suppliers.html">
+                <i class="bi bi-bar-chart"></i>
+                <span>Suppliers</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/Return.html">
+                <i class="bi bi-grid"></i>
+                <span>ReturnForm</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/userSetting.html">
+                <i class="bi bi-grid"></i>
+                <span>UserSetting</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+
+
+    </ul>
+
+</aside>
+
+
+
+<main id="main" class="main">
+
+    <!-- ======= Customer Manage ======= -->
+    <div class="pageTitle" id="pagetwo">
+        <h1 style="color: black">Manage Return</h1>
+
+        <section class="container-fluid mt-3" id="manageInventory">
+            <!--            <nav>-->
+            <!--                <ol class="breadcrumb">-->
+            <!--                    <li class="breadcrumb-item"><a href="../AdminDashBoard.html">Home</a></li>-->
+            <!--                    <li class="breadcrumb-item active">Manage / Inventory</li>-->
+            <!--                </ol>-->
+            <!--            </nav>-->
+
+            <div class="row mt-3">
+                <div class="card info-card" style="background-color: #e6e6e6">
+                    <div class="search-bar mt-4">
+                        <div class="search-form d-flex align-items-center">
+                            <input type="search" name="return" id="search_return" placeholder="Search" title="Enter search keyword">
+                            <button type="button" title="Search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- End Search Bar -->
+                    <div class="col-12 m-3 p-1">
+                        <form class="row" id="returnForm">
+                            <section id="sec1Return" class="col-md-4 mt-3">
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="return_order_code">Order Code</label>
+                                    <input type="text" name="code" class="form-control" id="return_order_code">
+                                    <span class="control-error"></span>
+                                </div>
+
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="option">Option</label>
+                                    <select class="form-control" id="option" name="shoeType">
+                                        <option value="FullOrder">FullOrder</option>
+                                        <option value="OneItem">OneItem</option>
+
+                                    </select>
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3 d-none" id="return_code">
+                                    <label class="form-label" for="return_item_code">Item code</label>
+                                    <input type="text" name="size" class="form-control" id="return_item_code"
+                                           placeholder="Item QTY">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3 d-none" id="return_qty">
+                                    <label class="form-label" for="return_item_qty">Item qty</label>
+                                    <input type="text" name="code" class="form-control" id="return_item_qty"
+                                    >
+                                    <span class="control-error"></span>
+                                </div>
+
+
+
+
+
+                            </section>
+
+                            <section id="sec2Inventory" class="col-md-4 mt-3">
+
+
+
+
+                            </section>
+
+                            <section id="sec3" class="col-md-4 mt-3">
+
+                            </section>
+                            <section>
+                                <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex justify-content-md-center">
+                                    <button class="btn btn-success me-md-1" id="btnAddReturn" type="button">Return</button>
+                                    <button type="button" class="btn btn-primary me-md-1" id="btnClearReturn">Clear</button>
+
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+                <div class="card info-card" style="background-color: #e6e6e6">
+                    <!-- View Customer Details Table Start -->
+                    <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 350px;">
+                        <div class="col-11 justify-content-around sectionBorder"
+                             style="height: 290px; background: white">
+                            <div class="table-responsive customerTableDiv overflow-auto " style="height: 300px;">
+                                <table class="table table-light table-striped table-bordered table-hover">
+                                    <thead class="text-dark table-dark text-white text-center  table-bordered sticky-top">
+                                    <tr>
+                                        <th scope="col">Order Id</th>
+                                        <th scope="col">Item code</th>
+                                        <th scope="col">Order qty</th>
+                                        <th scope="col">Return qty</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="returnTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- View Customer Details Table End -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End Customer Manage-->
+
+</main>
+
+<script src="../../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.all.min.js"></script>
+
+<script src="../../controller/ReturnController.js"></script>
+<script src="../../controller/loginController.js"></script>
+
+</body>
+</html>

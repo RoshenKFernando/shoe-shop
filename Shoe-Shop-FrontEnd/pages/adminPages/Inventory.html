@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+
+
+    <meta content="Hello Shoe PVT" name="keywords">
+    <meta content="This is Hello shoe Web Project." name="description">
+    <meta content="" name="author">
+    <meta content="" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="green" name="theme-color">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.css">
+    <link rel="stylesheet" href="../../assets/css/dashboardStyle.css">
+
+
+
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="../AdminDashBoard.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">Hello <span>Shoe</span></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+</header>
+
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../AdminDashBoard.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Customer.html">
+                <i class="bi bi-table"></i>
+                <span>Customer</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Employee.html">
+                <i class="bi bi-table"></i>
+                <span>Employee</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Inventory.html">
+                <i class="bi bi-kanban"></i>
+                <span>Inventory</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Suppliers.html">
+                <i class="bi bi-bar-chart"></i>
+                <span>Suppliers</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/Return.html">
+                <i class="bi bi-grid"></i>
+                <span>ReturnForm</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/userSetting.html">
+                <i class="bi bi-grid"></i>
+                <span>UserSetting</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<!-- ======= Main ======= -->
+
+<main id="main" class="main">
+
+    <!-- ======= Customer Manage ======= -->
+    <div class="pageTitle" id="pagetwo">
+        <h1 style="color: black">Manage Inventory</h1>
+
+        <section class="container-fluid mt-3" id="manageInventory">
+
+
+            <div class="row mt-3">
+                <div class="card info-card" style="background-color: #dfe4ea ">
+                    <div class="search-bar mt-4">
+                        <div class="search-form d-flex align-items-center">
+                            <input type="search" name="inv_id" id="search_inv_Id" placeholder="Search" title="Enter search keyword">
+                            <button type="button" title="Search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- End Search Bar -->
+                    <div class="col-12 m-3 p-1">
+                        <form class="row" id="InventoryForm">
+                            <section id="sec1Inventory" class="col-md-4 mt-3">
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="item_code">Item Code</label>
+                                    <input type="text" name="code" class="form-control" id="item_code"
+                                           placeholder="Item Code">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="inv_Item_Desc">Item Name</label>
+                                    <input type="text" name="Name" class="form-control" id="inv_Item_Desc">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="inv_qty">Item Qty</label>
+                                    <input type="text" name="qty" class="form-control" id="inv_qty"
+                                           placeholder="Item QTY">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="inv_Category">Category</label>
+                                    <select class="form-control" id="inv_Category" name="category">
+                                        <option value="MEN">MEN</option>
+                                        <option value="WOMEN">WOMEN</option>
+
+                                    </select>
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="size">Size</label>
+                                    <!--<input type="text" name="size" class="form-control" id="size"
+                                           placeholder="SIZE">-->
+                                    <select id="size" name="size" class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="5">Size 5</option>
+                                        <option value="6">Size 6</option>
+                                        <option value="7">Size 7</option>
+                                        <option value="8">Size 8</option>
+                                        <option value="9">Size 9</option>
+                                        <option value="10">Size 10</option>
+                                    </select>
+                                    <span class="control-error"></span>
+                                </div>
+
+                            </section>
+
+                            <section id="sec2Inventory" class="col-md-4 mt-3">
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="inv_Supplier_Code">Supplier Code</label>
+                                    <input type="text" name="supplier" class="form-control"  id="inv_Supplier_Code"
+                                           placeholder="Supplier name">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="inv_Supplier_name">Supplier name</label>
+                                    <input type="text" name="supName" class="form-control"  id="inv_Supplier_name" readonly>
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="inv_Unit_price">Unit price-Sale</label>
+                                    <input type="text" name="salePrice" class="form-control" id="inv_Unit_price"
+                                           placeholder="Unit price-Sale">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="unit_price_Buy">unit price-Buy</label>
+                                    <input type="text" name="buyPrice" class="form-control" id="unit_price_Buy"
+                                           placeholder="unit price-Buy">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="Expected_Profit">Expected Profit</label>
+                                    <input type="text" name="expectedProfit" class="form-control"  id="Expected_Profit" readonly>
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="Profit_margin">Profit margin</label>
+                                    <input type="text" name="profitMargin" class="form-control"  id="Profit_margin" readonly>
+                                    <span class="control-error"></span>
+                                </div>
+
+
+                            </section>
+
+                            <section id="sec3" class="col-md-4 mt-3">
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="Inv_Status">Status</label>
+                                    <input type="text" name="status" class="form-control" id="Inv_Status">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3 col-md-11">
+                                    <label class="form-label" for="inv_Item_pic">Item picture</label>
+                                    <input class="form-control" id="inv_Item_pic" type="file" name="itemPicture">
+                                    <span class="control-error"></span>
+                                </div>
+                                <img id="img" src="../../assets/img/login.jpg" width="300px">
+
+                                <input type="file" id="imgInput" accept="image/*" style="display: none">
+
+                            </section>
+
+                            <section>
+                                <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex justify-content-md-center">
+                                    <button class="btn btn-success me-md-1" id="btnAddInventory" type="button">Save</button>
+                                    <button class="btn btn-warning me-md-1" id="btnUpdateInventory" type="button">Update</button>
+                                    <button type="button" class="btn btn-danger me-md-1" id="btnDeleteInventory">Delete</button>
+                                    <button type="button" class="btn btn-primary bt me-md-1" id="btnClearItem">Clear</button>
+                                </div>
+                            </section>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="card info-card" style="background-color: #dfe4ea ">
+                    <!-- View Customer Details Table Start -->
+                    <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 350px;">
+                        <div class="col-11 justify-content-around sectionBorder"
+                             style="height: 290px; background: white">
+                            <div class="table-responsive customerTableDiv overflow-auto " style="height: 300px;">
+                                <table class="table table-light table-striped table-bordered table-hover">
+                                    <thead class="text-dark table-dark text-white text-center  table-bordered sticky-top">
+                                    <tr>
+                                        <th scope="col">Item code</th>
+                                        <th scope="col">Item Desc</th>
+                                        <th scope="col">QTY</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Supplier Code</th>
+                                        <th scope="col">Supplier name</th>
+                                        <th scope="col">Unit price-Sale</th>
+                                        <th scope="col">unit price-Buy</th>
+                                        <th scope="col">Expected Profit</th>
+                                        <th scope="col">Profit margin</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="inventoryTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- End Customer Manage-->
+
+</main>
+
+
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.js"></script>
+
+<!-- Template Dashboard Main JS File -->
+<script src="../../assets/js/dashboardMain.js"></script>
+<script src="../../controller/ItemController.js"></script>
+<script src="../../controller/loginController.js"></script>
+
+
+
+<!-- Util JS File -->
+<script src="../../util/alert.js" rel="script"></script>
+<script src="../../util/validation.js" rel="script"></script>
+</body>
+</html>

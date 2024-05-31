@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="Hello Shoe PVT" name="keywords">
+    <meta content="This is Hello shoe Web Project." name="description">
+    <meta content="" name="author">
+    <meta content="" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="green" name="theme-color">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.css">
+    <link rel="stylesheet" href="../../assets/css/dashboardStyle.css">
+
+
+</head>
+
+<body>
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="../AdminDashBoard.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">Hello <span>Shoe</span></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+
+
+</header>
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../AdminDashBoard.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="../adminPages/Customer.html">
+                <i class="bi bi-table"></i>
+                <span>Customer</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="../adminPages/Employee.html">
+                <i class="bi bi-table"></i>
+                <span>Employee</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="../adminPages/Inventory.html">
+                <i class="bi bi-kanban"></i>
+                <span>Inventory</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="../adminPages/Suppliers.html">
+                <i class="bi bi-bar-chart"></i>
+                <span>Suppliers</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/Return.html">
+                <i class="bi bi-grid"></i>
+                <span>ReturnForm</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " href="../adminPages/userSetting.html">
+                <i class="bi bi-grid"></i>
+                <span>UserSetting</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+
+
+    </ul>
+
+</aside>
+
+<!--<main id="main" class="main">
+
+    <div class="pageTitle" id="pagetwo">
+        <h1>Manage</h1>
+
+        <section class="container-fluid mt-3" id="manageEmployee">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../AdminDashBoard.html">Home</a></li>
+                    <li class="breadcrumb-item active">Manage / Employee</li>
+                </ol>
+            </nav>
+
+            <div class="row mt-3">
+                <div class="card info-card">
+                    <div class="search-bar mt-4">
+                        <div class="search-form d-flex align-items-center">
+                            <input type="search" name="user_Id" id="search_UId" placeholder="Search" title="Enter search keyword">
+                            <button type="button" title="Search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    &lt;!&ndash; End Search Bar &ndash;&gt;
+                    <div class="col-12 m-3 p-1">
+                        <form class="row" id="userForm">
+                            <section id="sec1User" class="col-md-4 mt-3">
+
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="User_code">User code</label>
+                                    <input type="text" name="User_code" class="form-control" readonly id="User_code"
+                                           placeholder="U00-001">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="User_name">User name</label>
+                                    <input type="text" name="User_name" class="form-control" id="User_name"
+                                           placeholder="User Name">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="User_email">User email</label>
+                                    <input type="text" name="User_email" class="form-control" id="User_email"
+                                           placeholder="User email">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="Pass_word">Pass word</label>
+                                    <input type="text" name="Pass_word" class="form-control" id="Pass_word"
+                                           placeholder="Pass word">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="User_role">Role</label>
+                                    <select class="form-control" id="User_role" name="User_role">
+                                        <option>Admin</option>
+                                        <option>User</option>
+
+                                    </select>
+
+                                    <span class="control-error"></span>
+                                </div>
+
+
+                            </section>
+
+
+
+                            <section id="sec3User" class="col-md-4 mt-3">
+                                <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex justify-content-md-center">
+                                    <button class="btn btn-success me-md-1" id="btnAddUser" type="button">Add</button>
+                                    <button class="btn btn-warning me-md-1" id="btnUpdateUser" type="button">Update</button>
+                                    <button type="button" class="btn btn-danger me-md-1" id="btnDeleteUser">Delete</button>
+                                </div>
+                            </section>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="card info-card">
+                    &lt;!&ndash; View Customer Details Table Start &ndash;&gt;
+                    <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 350px;">
+                        <div class="col-11 justify-content-around sectionBorder"
+                             style="height: 290px; background: white">
+                            <div class="table-responsive customerTableDiv overflow-auto " style="height: 300px;">
+                                <table class="table table-light table-striped table-bordered table-hover">
+                                    <thead class="text-dark table-danger text-center  table-bordered sticky-top">
+                                    <tr>
+                                        <th scope="col">User code</th>
+                                        <th scope="col">User name</th>
+                                        <th scope="col">User email</th>
+                                        <th scope="col">Pass word</th>
+                                        <th scope="col">Role</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="userTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; View Customer Details Table End &ndash;&gt;
+                </div>
+            </div>
+        </section>
+    </div>
+    &lt;!&ndash; End Customer Manage &ndash;&gt;
+
+</main>-->
+
+<main id="main" class="main">
+
+    <!-- ======= Customer Manage ======= -->
+    <div class="pageTitle" id="pagetwo">
+        <h1>User Manage</h1>
+
+        <section class="container-fluid mt-3" id="manageUser">
+
+            <div class="row mt-3">
+                <div class="card info-card">
+                    <div class="search-bar mt-4">
+                        <div class="search-form d-flex align-items-center">
+                            <input type="search" name="user_Id" id="search_UId" placeholder="Search" title="Enter search keyword">
+                            <button type="button" title="Search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- End Search Bar -->
+                    <div class="col-12 m-3 p-1">
+                        <form class="row" id="userForm">
+                            <section id="sec1User" class="col-md-4 mt-3">
+
+                                <div class="mb-sm-0 ">
+                                    <label class="form-label" for="Useremail">User email</label>
+                                    <input type="text" name="User_email" class="form-control" id="Useremail"
+                                           placeholder="User email">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="userpass">Password</label>
+                                    <input type="text" name="userpass" class="form-control" id="userpass"
+                                           placeholder="Pass word">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="Userrole">Role</label>
+                                    <select class="form-control" id="Userrole" name="User_role">
+                                        <option>ADMIN</option>
+                                        <option>USER</option>
+
+                                    </select>
+
+                                    <span class="control-error"></span>
+                                </div>
+
+
+                            </section>
+
+
+
+                            <section id="sec3User" class="col-md-4 mt-3">
+                                <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex justify-content-md-center">
+                                    <button class="btn btn-warning me-md-1" id="btnUpdateUser" type="button">Update</button>
+                                    <button type="button" class="btn btn-danger me-md-1" id="btnDeleteUser">Delete</button>
+                                </div>
+                            </section>
+
+
+                        </form>
+                    </div>
+                </div>
+
+               <!-- <div class="card info-card">
+                    &lt;!&ndash; View Customer Details Table Start &ndash;&gt;
+                    <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 350px;">
+                        <div class="col-11 justify-content-around sectionBorder"
+                             style="height: 290px; background: white">
+                            <div class="table-responsive customerTableDiv overflow-auto " style="height: 300px;">
+                                <table class="table table-light table-striped table-bordered table-hover">
+                                    <thead class="text-white table-dark text-center  table-bordered sticky-top">
+                                    <tr>
+                                        <th scope="col">User code</th>
+                                        <th scope="col">User name</th>
+                                        <th scope="col">User email</th>
+                                        <th scope="col">Pass word</th>
+                                        <th scope="col">Role</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="userTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; View Customer Details Table End &ndash;&gt;
+                </div>-->
+            </div>
+        </section>
+    </div>
+    <!-- End Customer Manage-->
+
+</main>
+
+<!-- Vendor JS Files -->
+<script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.all.min.js"></script>
+<script src="../../assets/vendor/fontawesome-free/js/all.min.js"></script>
+
+<script src="../../controller/loginController.js"></script>
+<script src="../../controller/UserController.js"></script>
+</body>
+</html>

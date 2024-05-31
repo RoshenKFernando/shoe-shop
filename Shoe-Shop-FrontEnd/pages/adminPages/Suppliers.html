@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+
+
+    <meta content="Hello Shoe PVT" name="keywords">
+    <meta content="This is Hello shoe Web Project." name="description">
+    <meta content="" name="author">
+    <meta content="" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="green" name="theme-color">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.css">
+    <link rel="stylesheet" href="../../assets/css/dashboardStyle.css">
+
+
+
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="../AdminDashBoard.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">Hello <span>Shoe</span></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+
+
+</header>
+
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../AdminDashBoard.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Customer.html">
+                <i class="bi bi-table"></i>
+                <span>Customer</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/Employee.html">
+                <i class="bi bi-table"></i>
+                <span>Employee</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Inventory.html">
+                <i class="bi bi-kanban"></i>
+                <span>Inventory</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Suppliers.html">
+                <i class="bi bi-bar-chart"></i>
+                <span>Suppliers</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/Return.html">
+                <i class="bi bi-grid"></i>
+                <span>ReturnForm</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/userSetting.html">
+                <i class="bi bi-grid"></i>
+                <span>UserSetting</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+
+
+    </ul>
+
+</aside>
+
+
+<!-- ======= Main ======= -->
+<main id="main" class="main">
+
+    <!-- ======= Supplier Manage ======= -->
+    <div class="pageTitle" id="pagetwo">
+        <h1>Supplier Manage</h1>
+
+        <section class="container-fluid mt-3" id="manageSupplier">
+     <!--       <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../AdminDashBoard.html">Home</a></li>
+                    <li class="breadcrumb-item active">Manage / Suppliers</li>
+                </ol>
+            </nav>-->
+
+            <div class="row mt-3" >
+                <div class="card info-card" style="background-color: #dfe4ea ">
+                    <div class="search-bar mt-4">
+                        <div class="search-form d-flex align-items-center">
+                            <input type="search" id="form1" class="form-control" style="width: 300px" placeholder="Search"/>
+                            <button type="button" title="Search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- End Search Bar -->
+                    <div class="col-12 m-3 p-1">
+                        <form class="row" id="supplierForm">
+                            <section id="sec1Customer" class="col-md-4 mt-3">
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="supplier_code"> Supplier code</label>
+                                    <input type="text" name="Code" class="form-control" readonly id="supplier_code"
+                                           placeholder="S00-001">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="name"> Supplier name</label>
+                                    <input type="text" name="name" class="form-control" id="name">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="category">Category</label>
+                                    <select class="form-control" id="category" name="category">
+                                        <option selected></option>
+                                        <option value="INTERNATIONAL">INTERNATIONAL</option>
+                                        <option VALUE="LOCAL">LOCAL</option>
+                                    </select>
+
+                                    <span class="control-error"></span>
+                                </div>
+
+                            </section>
+
+                            <section id="sec2Customer" class="col-md-4 mt-3">
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="S_address_1">No Or Name</label>
+                                    <input type="text" name="address1" class="form-control" id="S_address_1">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="S_address_2">Lane</label>
+                                    <input type="text" name="address2" class="form-control" id="S_address_2">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="S_address_3">City</label>
+                                    <input type="text" name="address3" class="form-control" id="S_address_3">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="S_address_4">State</label>
+                                    <input type="text" name="address4" class="form-control" id="S_address_4">
+                                    <span class="control-error"></span>
+                                </div>
+
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="S_address_5">Code</label>
+                                    <input type="text" name="address5" class="form-control" id="S_address_5">
+                                    <span class="control-error"></span>
+                                </div>
+
+                            </section>
+
+                            <section id="sec3" class="col-md-4 mt-3">
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="ContactNo1"> ContactNo.1</label>
+                                    <input type="text" name="contact1" class="form-control" id="ContactNo1"
+                                           placeholder=" ContactNo.1">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="ContactNo2"> ContactNo.2</label>
+                                    <input type="text" name="contact2" class="form-control" id="ContactNo2"
+                                           placeholder=" ContactNo.2">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input type="text" name="email" class="form-control" id="email"
+                                           placeholder="Email">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <!--                <div class="mb-sm-0">-->
+                                <!--                  <label for="role_Type" class="form-label">Role type</label>-->
+                                <!--&lt;!&ndash;                  <select class="form-control" id="role_Type" name="role_Type">&ndash;&gt;-->
+                                <!--&lt;!&ndash;                    <option value="REGISTERED_USER">REGISTERED_USER</option>&ndash;&gt;-->
+                                <!--&lt;!&ndash;                  </select>&ndash;&gt;-->
+                                <!--                  <span class="control-error"></span>-->
+                                <!--                </div>-->
+                                <!--                <div class="mb-sm-0 mt-3">-->
+                                <!--                  <label for="user_Name" class="form-label">User Name</label>-->
+                                <!--                  <div class="input-group has-validation">-->
+                                <!--                    <span class="input-group-text" id="inputGroupPrepend">@</span>-->
+                                <!--                    <input type="text" name="user_Name" class="form-control" id="user_Name"-->
+                                <!--                           placeholder="User Name">-->
+                                <!--                    <span class="control-error"></span>-->
+                                <!--                  </div>-->
+                                <!--                </div>-->
+                                <!--                <div class="mb-sm-0 mt-3">-->
+                                <!--                  <label class="form-label" for="password">Password</label>-->
+                                <!--                  <input type="password" name="password" class="form-control" id="password"-->
+                                <!--                         placeholder="Enter Password">-->
+                                <!--                  <span class="control-error"></span>-->
+                                <!--                </div>-->
+
+                            </section>
+                          <section>
+                              <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex justify-content-md-center">
+                                  <button class="btn btn-success me-md-1" id="btnSaveSupplier" type="button">Save</button>
+                                  <button class="btn btn-warning me-md-1" id="btnUpdateSupplier" type="button">Update</button>
+                                  <button type="button" class="btn btn-danger me-md-1" id="btnDeleteSupplier">Delete</button>
+                                  <button type="button" class="btn btn-primary bt me-md-1" id="btnClearSupplier">Clear</button>
+                              </div>
+                          </section>
+                        </form>
+                    </div>
+                </div>
+                <div class="card info-card" style="background-color: #dfe4ea ">
+                    <!-- View Customer Details Table Start -->
+                    <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 350px;">
+                        <div class="col-11 justify-content-around sectionBorder"
+                             style="height: 290px; background: white">
+                            <div class="table-responsive customerTableDiv overflow-auto " style="height: 300px;">
+                                <table class="table table-light table-striped table-bordered table-hover">
+                                    <thead class="text-white table-dark text-center  table-bordered sticky-top">
+                                    <tr>
+                                        <th scope="col">Supplier code</th>
+                                        <th scope="col">Supplier name</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">ContactNo.1</th>
+                                        <th scope="col">ContactNo.2</th>
+                                        <th scope="col">Email</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="suppliersTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.js"></script>
+
+<script src="../../controller/loginController.js"></script>
+<!-- Template Dashboard Main JS File -->
+<script src="../../assets/js/dashboardMain.js"></script>
+<script src="../../controller/SupplierController.js"></script>
+
+
+<!-- Util JS File -->
+<script src="../../util/alert.js" rel="script"></script>
+<script src="../../util/validation.js" rel="script"></script>
+</body>
+</html>

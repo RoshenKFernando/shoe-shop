@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shoe Shop Login</title>
+
+  <meta content="Hello Shoe PVT" name="keywords">
+  <meta content="This is Hello shoe Web Project." name="description">
+  <meta content="" name="author">
+  <meta content="" name="owner">
+  <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+  <meta content="green" name="theme-color">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.css">
+  <link rel="stylesheet" href="../assets/vendor/styleslog/sb-admin-2.min.css">
+
+
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Outer Row -->
+  <div class="row justify-content-center mt-5">w
+
+    <div class="col-xl-10 col-lg-12 col-md-9">
+
+      <div class="card o-hidden border-0 shadow-lg my-6 sectionBorder">
+        <div class="card-body p-0">
+          <!-- Nested Row within Card Body -->
+          <div class="row">
+            <div class="col-lg-6 d-none d-lg-block" style="background: url(../assets/img/login.jpg);background-size: cover"></div>
+            <div class="col-lg-6">
+              <div class="p-5">
+                <div class="text-center">
+                  <h1 class="h4 text-gray-900 mb-4">Welcome</h1>
+                </div>
+                <form class="user m-2 p-3" id="loginForm">
+                  <div class="form-group">
+
+                  </div>
+                  <div class="form-group mt-4">
+                    <input type="text" class="form-control form-control-user"
+                           id="user_Name" aria-describedby="emailHelp"
+                           placeholder="Enter User Name...">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-user"
+                           id="password" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox small">
+                      <input type="checkbox" class="custom-control-input" id="customCheck">
+                      <label class="custom-control-label" for="customCheck">Remember
+                        Me</label>
+                    </div>
+                  </div>
+                  <button id="btnLogin" type="button" class="btn btn-dark btn-user btn-block">
+                    Login
+                  </button>
+                  <a class="nav-link " href="SingUp.html">
+                  <button type="button" class="btn btn-dark btn-user btn-block">
+                    SignUp
+                  </button>
+                    </a>
+                </form>
+                <hr>
+                <div class="text-center">
+                  <a class="small" href="">Forgot Password?</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../assets/vendor/sweetalert2-11.6.16/sweetalert2.all.min.js"></script>
+<script src="../controller/loginController.js"></script>
+
+
+<script src="../util/alert.js"></script>
+<script src="../util/validation.js"></script>
+</body>
+</html>

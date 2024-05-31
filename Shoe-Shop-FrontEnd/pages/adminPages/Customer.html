@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+
+
+    <meta content="Hello Shoe PVT" name="keywords">
+    <meta content="This is Hello shoe Web Project." name="description">
+    <meta content="" name="author">
+    <meta content="" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="green" name="theme-color">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.css">
+    <link rel="stylesheet" href="../../assets/css/dashboardStyle.css">
+
+
+
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="../AdminDashBoard.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">Hello <span>Shoe</span></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+</header>
+
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../AdminDashBoard.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Customer.html">
+                <i class="bi bi-table"></i>
+                <span>Customer</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Employee.html">
+                <i class="bi bi-table"></i>
+                <span>Employee</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Inventory.html">
+                <i class="bi bi-kanban"></i>
+                <span>Inventory</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/Suppliers.html">
+                <i class="bi bi-bar-chart"></i>
+                <span>Suppliers</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/Return.html">
+                <i class="bi bi-grid"></i>
+                <span>ReturnForm</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  collapsed" href="../adminPages/userSetting.html">
+                <i class="bi bi-grid"></i>
+                <span>UserSetting</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+<!-- ======= Main ======= -->
+<main id="main" class="main">
+
+    <!-- ======= Customer Manage ======= -->
+    <div class="pageTitle" id="pagetwo">
+
+        <h1>Customer Manage</h1>
+        <section class="container-fluid mt-3" id="manageCustomer">
+           <!-- <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../AdminDashBoard.html">Home</a></li>
+                    <li class="breadcrumb-item active">Manage / Customers</li>
+                </ol>
+            </nav>-->
+
+            <div class="row mt-3">
+                <div class="card info-card"  style="background-color: #dfe4ea ">
+                    <div class="search-bar mt-4">
+                        <div class="search-form d-flex align-items-center">
+                            <input type="search" id="form2" class="form-control" style="width: 300px" placeholder="Search"/>
+                            <button type="button" title="Search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- End Search Bar -->
+                    <div class="col-12 m-3 p-1">
+                        <form class="row" id="customerForm">
+                            <section id="sec1Customer" class="col-md-4 mt-3">
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="cusId">Customer code</label>
+                                    <input type="text" name="code" class="form-control" readonly id="cusId"
+                                           placeholder="C00-001">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="customer_name">Customer name</label>
+                                    <input type="text" name="name" class="form-control" id="customer_name">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="gender">Gender</label>
+                                    <select class="form-control" id="gender" name="gender">
+                                        <option selected></option>
+                                        <option value="MALE">MALE</option>
+                                        <option value="FEMALE">FEMALE</option>
+                                    </select>
+                                    <!--                  <input type="text" name="lastName" class="form-control" id="lastName"-->
+                                    <!--                         placeholder="Last Name">-->
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="loyaltyDate">Join date as a loyalty customer</label>
+                                    <input type="date" name="loyaltyDate" class="form-control" id="loyaltyDate"
+                                           placeholder="Contact Number">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="level">Level</label>
+                                    <select class="form-control" id="level" name="level">
+                                        <option selected></option>
+                                        <option value="GOLD">GOLD</option>
+                                        <option value="SILVER">SILVER</option>
+                                        <option value="BRONZE">BRONZE</option>
+                                        <option value="NEW">NEW</option>
+                                    </select>
+                                    <!--                  <input type="text" name="lastName" class="form-control" id="lastName"-->
+                                    <!--                         placeholder="Last Name">-->
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="total_point">Total points</label>
+                                    <input type="text" name="loyaltyPoints" class="form-control" id="total_point">
+                                    <span class="control-error"></span>
+                                </div>
+
+                            </section>
+
+                            <section id="sec2Customer" class="col-md-4 mt-3">
+<!--                                <div class="mb-sm-0 mt-3">-->
+<!--                                    <label class="form-label" for="nic">DOB</label>-->
+<!--                                    <input type="text" name="nic" class="form-control" id="nic"-->
+<!--                                           placeholder="National ID">-->
+<!--                                    <span class="control-error"></span>-->
+<!--                                </div>-->
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="DOB">DOB</label>
+                                    <input type="date" name="dob" class="form-control" id="DOB"
+                                           placeholder="DOB">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="c_address_01">No Or Name</label>
+                                    <input type="text" name="address1" class="form-control" id="c_address_01">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="c_address_02">Lane</label>
+                                    <input type="text" name="address2" class="form-control" id="c_address_02">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="c_address_03">City</label>
+                                    <input type="text" name="address3" class="form-control" id="c_address_03">
+                                    <span class="control-error"></span>
+                                </div>
+
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="c_address_04">State</label>
+                                    <input type="text" name="address4" class="form-control" id="c_address_04">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0 mt-3">
+                                    <label class="form-label" for="c_address_05">Code</label>
+                                    <input type="text" name="address5" class="form-control" id="c_address_05">
+                                    <span class="control-error"></span>
+                                </div>
+
+                            </section>
+
+                            <section id="sec3" class="col-md-4 mt-3">
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="c_contact_num">ContactNo</label>
+                                    <input type="text" name="contact" class="form-control" id="c_contact_num"
+                                           placeholder="ContactNo.">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="customer_email">Email</label>
+                                    <input type="text" name="email" class="form-control" id="customer_email"
+                                           placeholder="Email">
+                                    <span class="control-error"></span>
+                                </div>
+                                <div class="mb-sm-0">
+                                    <label class="form-label" for="recentPurchaseDate">recent_Purchase_Date</label>
+                                    <input type="text" id="recentPurchaseDate" name="recentPurchaseDate" class="form-control">
+                                    <span class="control-error"></span>
+                                </div>
+
+
+
+                            </section>
+
+                            <section>
+                                <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex justify-content-md-center">
+                                    <button class="btn btn-success me-md-1" id="btnSaveCustomer" type="button">Save</button>
+                                    <button class="btn btn-warning me-md-1" id="btnUpdateCustomer" type="button">Update</button>
+                                    <button type="button" class="btn btn-danger me-md-1" id="btnDeleteCustomer">Delete</button>
+                                    <button type="button" class="btn btn-primary bt me-md-1" id="btnClearCustomer">Clear</button>
+                                </div>
+                            </section>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="card info-card" style="background-color: #dfe4ea ">
+                    <!-- View Customer Details Table Start -->
+                    <div class="row mt-1 mt-md-2 mt-lg-4 mm-2 p-2 justify-content-around" style="height: 350px;">
+                        <div class="col-11 justify-content-around sectionBorder"
+                             style="height: 290px; background: white">
+                            <div class="table-responsive customerTableDiv overflow-auto " style="height: 300px;">
+                                <table class="table table-light table-striped table-bordered table-hover">
+                                    <thead class="text-white table-dark text-center  table-bordered sticky-top">
+                                    <tr>
+                                        <th scope="col">Customer Code</th>
+                                        <th scope="col">Customer Name</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">loyalty Date</th>
+                                        <th scope="col">Total points</th>
+                                        <th scope="col">DOB</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">ContactNo</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">PurchaseDate</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="customerTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</main>
+
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+<script src="../../controller/loginController.js"></script>
+<!-- Vendor JS Files -->
+<script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.js"></script>
+
+<!-- Template Dashboard Main JS File -->
+<script src="../../assets/js/dashboardMain.js"></script>
+<script src="../../controller/CustomerController.js"></script>
+
+
+
+<!-- Util JS File -->
+<script src="../../util/alert.js" rel="script"></script>
+<script src="../../util/validation.js" rel="script"></script>
+</body>
+</html>

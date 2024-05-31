@@ -1,0 +1,141 @@
+.hello1{
+    position: absolute;
+    color: black;
+    left: 150vh;
+    top: 20vh;
+    font-size: 10vh;
+
+}
+
+#btnMainS{
+    background-color: red;
+    position: relative;
+    left: 70vh;
+    top: 65vh;
+    border-radius: 50px;
+    size: 10vh;
+}
+
+.shadow-lg{
+    background-color: #f5f5ed;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.img {
+    box-sizing: border-box;
+    position: absolute;
+    top: 20vh;
+    right: 120vh;
+    width: 600px;
+}
+
+.right {
+    position: relative;
+    left: 65%;
+    top: 10rem;
+    width: 30%;
+}
+
+.hello1 {
+    position: absolute;
+    color: black;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-size: 10vh;
+}
+.hello1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFA633;
+    animation: showRight 2s ease forwards;
+    animation-delay: 2s;
+}
+
+.hello2 {
+    position: absolute;
+    color: black;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-size: 10vh;
+    top: 5rem;
+}
+.hello2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1.5%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 2.2s;
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    top: 15rem;
+}
+.buttons a{
+    text-decoration: none;
+}
+
+.btn{
+    background-color: #FFA633;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 5px 10px;
+    font-size: 25px;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    color: #000;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: showRight 3s ease forwards;
+    animation-delay: 3s;
+}
+
+.btn:hover{
+    background-color: rgb(217, 18, 18);
+    border: 2px solid white;
+    color: #000;
+}
+
+#preloader {
+    background: black url(../img/rainbow.gif) no-repeat center center;
+    /* left: 10rem; */
+    background-size: 10rem;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+iframe{
+    display: none;
+}
+
+@keyframes showRight {
+    100% {
+        width:0;
+        }
+}

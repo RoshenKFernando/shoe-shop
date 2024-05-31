@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="hello shoe pvt" name="keywords">
+    <meta content="This is hello shoe pvt web project" name="description">
+    <meta content="" name="author">
+    <meta content="" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="green" name="theme-color">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/UserDashBord.css">
+
+
+
+</head>
+<body>
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="../UserDashBoard.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">Hello <span>Shoe</span></span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+
+
+</header>
+
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../UserDashBoard.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../userPages/Sale.html">
+                <i class="bi bi-keyboard-fill"></i>
+                <span>Sales</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../userPages/SaleDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>SaleDetails</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../userPages/EmployeeDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>EmployeeView</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../userPages/InventoryDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>InventoryView</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../userPages/SuppliersDetails.html">
+                <i class="bi bi-grid"></i>
+                <span>SuppliersView</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../login.html">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>LogOut</span>
+            </a>
+        </li>
+
+
+    </ul>
+
+</aside>
+
+<main id="main" class="main">
+    <div class="pageTitle" id="pagetwo">
+        <div class="row justify-content-around" style="height: min-content">
+
+            <section
+                    class="d-flex flex-column h-100 col-10 col-xl-11 shadow-lg rounded-3 align-items-center pt-3 mt-2 mb-4 sectionBorder "
+                    style="background: white">
+                <h4 class="text-center p-2 text-light rounded-5 col-12 ubFt" style="background: #378CE7">SALES</h4>
+                <!-- View Orders Table Start -->
+                <div class="col-11 justify-content-around " style="height: 250px;">
+                    <div class="PlaceOrderTableDiv overflow-auto" style="height: 230px;">
+                        <table class="table table-light table-striped table-bordered table-hover">
+                            <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                            <tr>
+                                <th>Sale Id</th>
+                                <th>Sale Date</th>
+                                <th>Total</th>
+                                <th>payment method</th>
+                                <th>cashier name</th>
+                                <th>total point</th>
+                                <th>customer name</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblOrder"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                    class="d-flex flex-column h-100 col-10 col-xl-11 shadow-lg rounded-3 align-items-center pt-3 sectionBorder "
+                    style="background: white">
+                <h4 class="text-center  p-2 text-light rounded-5 col-12 " style="background: #378CE7">SALES
+                    DETAILS</h4>
+                <!-- View Order Details Table Start -->
+                <div class="col-11 justify-content-around " style="height: 250px;">
+                    <div class="PlaceOrderTableDiv overflow-auto" style="height: 230px;">
+                        <table class="table text-bg-light table-striped table-bordered table-hover">
+                            <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                            <tr>
+                                <th>Sale Id</th>
+                                <th>Item Code</th>
+                                <th>Qty</th>
+                                <th>price</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblOrderDetails"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+    <!-- End Customer Manage-->
+
+</main>
+
+<script src="../../assets/vendor/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.all.min.js"></script>
+
+<script src="../../controller/SaleController.js"></script>
+<script src="../../util/alert.js"></script>
+<script src="../../controller/SaleViewController.js"></script>
+<script src="../../controller/loginController.js"></script>
+
+</body>
+</html>
